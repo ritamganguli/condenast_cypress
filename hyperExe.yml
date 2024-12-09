@@ -17,6 +17,7 @@ cypressOps:
 env:
     CYPRESS_CACHE_FOLDER: cypressCache
     LT_SDK_DEBUG: true
+    CYPRESS_API_URL: ${{CYPRESS_API_URL}}
 globalTimeout: 100
 jobLabel:
     - cypress-v12
@@ -33,6 +34,7 @@ partialReports:
 pre:
     - npm install
     - npm install cypress --save-dev
+    - echo $CYPRESS_API_URL
 report: true
 retryOnFailure: false
 runson: linux
