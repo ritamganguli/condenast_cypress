@@ -3,7 +3,7 @@ shell: bash
 cacheDirectories:
     - node_modules
 cacheKey: '{{ checksum "package.json" }}'
-concurrency: 20
+concurrency: 5
 cypress: true
 cypressOps:
     Build: Hyperexecute Cypress automation test
@@ -35,13 +35,13 @@ pre:
     - npm install cypress --save-dev
 report: true
 retryOnFailure: false
-runson: mac
+runson: linux
 testDiscovery:
     # command: node ritam.js 
     command: node ritam.js > ritam.txt && cat ritam.txt
     mode: dynamic
     type: raw
-testRunnerCommand: npx cypress run  --spec $test --config video=false --headed
+testRunnerCommand: npx cypress run  --spec $test --config video=false --headed --browser=chrome
 testSuiteStep: 90
 testSuiteTimeout: 90
 version: 0.1

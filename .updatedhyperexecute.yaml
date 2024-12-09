@@ -1,3 +1,4 @@
+accessibilityJob: false
 alwaysRunPostSteps: false
 appium: false
 autosplit: true
@@ -10,7 +11,7 @@ captureScreenRecordingForScenarios: false
 codeDirectory: guru_condenast
 collectLocalGitData: true
 combineTasksInMatrixMode: false
-concurrency: 1
+concurrency: 5
 cypress: true
 cypressOps:
     accessibility: false
@@ -55,6 +56,7 @@ framework:
     args:
         appId: ""
         appPath: ""
+        artifacts: false
         avoidAppLaunch: false
         deviceSelectionStrategy: ""
         devices: []
@@ -62,7 +64,7 @@ framework:
         filters:
             attributes: []
         fixedIP: ""
-        isRealMobile: false
+        isRealMobile: null
         isVirtualDevice: false
         language: ""
         locale: ""
@@ -101,31 +103,23 @@ framework:
     version: ""
     workingDirectory: ""
 globalTimeout: 100
-jobID: b03c1b43-1c91-49e8-a302-f0e7112682e0
+jobID: 5b593bd2-9522-428b-8672-e8e0153ab95a
 jobLabel:
     - cypress-v12
     - win
     - hybrid
-key: dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh
+key: C2ezVpIFSTbQQB83sn85p06S5Fatn0OiDHcdDaCKo8uFNnk5mV
 localHTTPProxy: ""
-macParallelism: 10
-macTestRunnerCommand: npx cypress run  --spec $test --config video=false --headed
-matrix:
-    browser:
-        - firefox
-    os:
-        - mac
-maxRetries: 2
+maxRetries: 0
 maxRetriesPreSteps: 0
 meta: {}
-parallelism: 10
 partialReports:
     type: html
     location: target/surefire-reports/html
     frameworkName: Brand_Repo-Cypress Regression Report
     email:
         to:
-            - guru_murugan@condenast.com
+            - ritamg@lambdatest.com
         metaInfo: []
         linkValidity: 0
     configPath: ""
@@ -151,24 +145,25 @@ project:
     type: default
 regionConfig: []
 report: true
-runson: ${matrix.os}
+runson: linux
+shell: bash
 sourcePayload:
     verifySSL: true
 storageType: ""
 testDiscovery:
     autosubset: true
-    command: node ritam.js
-    macCommand: node ritam.js
+    command: node ritam.js > ritam.txt && cat ritam.txt
     mode: dynamic
     type: raw
 testDiscoveryResultV3: []
-testRunnerCommand: npx cypress run  --spec $test --config video=false --headed
+testRunnerCommand: npx cypress run  --spec $test --config video=false --headed --browser=chrome
 testSuiteStep: 90
 testSuiteTimeout: 90
 testSuites: []
 triggerMode: false
 tunnelOpts:
     testsPerTunnel: 10
-user: shubhamr
+unzipPayload: false
+user: Shubhamr
 version: "0.1"
 waitForArtefactsUpload: false
