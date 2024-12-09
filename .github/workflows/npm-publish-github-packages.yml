@@ -14,10 +14,10 @@ jobs:
 
     env:
       CYPRESS_API_URL: https://sorry-cypress-gateway-verso-services.gp-nonprod-na-0.conde.digital/director
-      COMMIT_INFO_MESSAGE: ${{ github.event.head_commit.message }}
-      CYPRESS_BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
-      CYPRESS_BEARER_TOKEN_STAG: ${{ secrets.BEARER_TOKEN_STAG }}
-      CYPRESS_PURGE_TOKEN: ${{ secrets.PURGE_TOKEN }}
+      COMMIT_INFO_MESSAGE: "Ritam"
+      CYPRESS_BEARER_TOKEN: "abc"
+      CYPRESS_BEARER_TOKEN_STAG: "xy"
+      CYPRESS_PURGE_TOKEN: "ab"
       CYPRESS_SECRET_KEY_PROD: ${{ secrets.CYPRESS_SECRET_KEY_PROD }}
       CYPRESS_SECRET_KEY_STAG: ${{ secrets.CYPRESS_SECRET_KEY_STAG }}
       CYPRESS_IS_CI: true
